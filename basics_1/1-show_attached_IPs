@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # my comment
 
-hostname --all-ip-addresses || hostname -I
+hostname -I
