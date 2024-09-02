@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # my comment
 
-sed '/::/d' /etc/hosts | sed '/#/d' | sed 's/\t.*$//g' | sed '/^$/d' | awk '{ gsub(/\xef\xbb\xbf/,""); print }' | sed '/^$/d'
+hostname --all-ip-addresses || hostname -I
