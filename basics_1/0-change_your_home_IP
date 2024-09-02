@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # my comment
 
-awk '!/localhost/' /etc/hosts > temp && mv temp /etc/hosts
-echo -e "127.0.0.2\tlocalhost" >> /etc/hosts
+sed -i '1s/^/127.0.0.2\tlocalhost /' /etc/hosts
+#echo -e "127.0.0.2\tlocalhost" >> /etc/hosts
 echo -e "8.8.8.8\tfacebook.com" >> /etc/hosts
