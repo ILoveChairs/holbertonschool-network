@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # my comment
 
-cut -f 1 /etc/hosts | sed '/::/d'
+ifconfig | grep 'inet ' | awk '{print $2}'
